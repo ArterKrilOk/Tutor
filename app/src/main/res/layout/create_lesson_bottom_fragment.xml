@@ -41,22 +41,38 @@
             android:layout_height="wrap_content" />
     </com.google.android.material.textfield.TextInputLayout>
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/dateInputLayout"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:focusable="true"
-        android:clickable="true"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/dateInput"
-            android:layout_width="match_parent"
-            android:hint="@string/date"
-            android:inputType="datetime"
-            android:maxLines="1"
-            android:editable="false"
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/dateInputLayout"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:enabled="false">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/dateInput"
+                android:layout_width="match_parent"
+                android:hint="@string/date"
+                android:inputType="datetime"
+                android:maxLines="1"
+                android:layout_height="wrap_content" />
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            style="@style/Widget.Material3.Button.TextButton"
+            android:id="@+id/buttonSelectDatetime"
+            android:layout_width="wrap_content"
+            android:layout_marginStart="@dimen/app_margin"
+            android:text="@string/select"
             android:layout_height="wrap_content" />
-    </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/descriptionInputLayout"
