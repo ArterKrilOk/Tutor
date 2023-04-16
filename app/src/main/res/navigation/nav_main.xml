@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/actionLessons">
+
+    <fragment
+        android:id="@+id/actionStudents"
+        tools:layout="@layout/students_fragment"
+        android:name="space.pixelsg.tutuor.main.students.StudentsFragment"
+        android:label="StudentsFragment">
+        <action
+            android:id="@+id/action_actionStudents_to_createStudentBottomFragment"
+            app:destination="@id/createStudentBottomFragment" />
+        <action
+            android:id="@+id/action_actionStudents_to_studentInfoFragment"
+            app:destination="@id/studentInfoFragment">
+            <argument
+                android:name="id"
+                app:argType="long" />
+        </action>
+    </fragment>
+
+    <dialog
+        android:id="@+id/createStudentBottomFragment"
+        tools:layout="@layout/create_student_bottom_fragment"
+        android:name="space.pixelsg.tutuor.main.create_student.CreateStudentBottomFragment"
+        android:label="CreateStudentBottomFragment" />
+    <dialog
+        android:id="@+id/studentInfoFragment"
+        tools:layout="@layout/create_student_bottom_fragment"
+        android:name="space.pixelsg.tutuor.main.student_info.StudentInfoFragment"
+        android:label="StudentInfoFragment" />
+    <fragment
+        android:id="@+id/actionAccount"
+        tools:layout="@layout/account_fragment"
+        android:name="space.pixelsg.tutuor.main.account.AccountFragment"
+        android:label="AccountFragment" />
+    <fragment
+        android:id="@+id/actionLessons"
+        android:name="space.pixelsg.tutuor.main.lessons.main.LessonsFragment"
+        tools:layout="@layout/lessons_list_fragment"
+        android:label="LessonsFragment">
+        <action
+            android:id="@+id/action_actionLessons_to_createLessonBottomFragment"
+            app:destination="@id/createLessonBottomFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/createLessonBottomFragment"
+        tools:layout="@layout/create_lesson_bottom_fragment"
+        android:name="space.pixelsg.tutuor.main.lessons.create_lesson.CreateLessonBottomFragment"
+        android:label="CreateLessonBottomFragment" />
+</navigation>

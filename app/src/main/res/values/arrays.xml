@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="lessons_tab_names">
+        <item>@string/calendar</item>
+        <item>@string/list</item>
+    </string-array>
+</resources>

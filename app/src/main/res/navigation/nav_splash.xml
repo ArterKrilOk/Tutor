@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_splash"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="space.pixelsg.tutuor.splash.ui.welcome.WelcomeFragment"
+        tools:layout="@layout/welcome_fragment"
+        android:label="WelcomeFragment" />
+    <fragment
+        android:id="@+id/splashFragment"
+        tools:layout="@layout/splash_fragment"
+        android:name="space.pixelsg.tutuor.splash.ui.splash.SplashFragment"
+        android:label="SplashFragment">
+        <action
+            android:id="@+id/action_splashFragment_to_welcomeFragment"
+            app:destination="@id/welcomeFragment"
+            app:launchSingleTop="true" />
+    </fragment>
+</navigation>

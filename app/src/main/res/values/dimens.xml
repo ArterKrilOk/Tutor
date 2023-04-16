@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="min_day_height">120dp</dimen>
+    <dimen name="day_padding">8dp</dimen>
+    <dimen name="half_app_margin">8dp</dimen>
+</resources>
