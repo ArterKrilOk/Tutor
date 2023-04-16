@@ -38,6 +38,7 @@
     <string name="phone">Phone</string>
     <string name="address">Address</string>
     <string name="student">Student</string>
+    <string name="specific_student">Student: %1$s</string>
     <string name="log_out">Log out</string>
     <string name="save">Save</string>
     <string name="account_students_count">Students: %1$d</string>
@@ -52,4 +53,9 @@
     <string name="title">Title</string>
     <string name="description">Description</string>
     <string name="date">Date</string>
+    <string name="none">None</string>
+    <string name="specific_date">Date: %1$s</string>
+    <string name="doubleclick_to_select_date_and_time">Doubleclick to select date and time</string>
+    <string name="click_to_select">Click to select</string>
+    <string name="select">Select</string>
 </resources>

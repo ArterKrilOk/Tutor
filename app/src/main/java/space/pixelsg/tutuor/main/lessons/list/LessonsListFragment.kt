@@ -2,8 +2,11 @@ package space.pixelsg.tutuor.main.lessons.list
 
 import android.os.Bundle
 import android.view.View
+import androidx.core.os.bundleOf
 import androidx.core.view.isVisible
+import androidx.navigation.fragment.findNavController
 import com.google.android.material.snackbar.Snackbar
+import space.pixelsg.tutuor.R
 import space.pixelsg.tutuor.common.BindingFragment
 import space.pixelsg.tutuor.common.UiUtils.collectOnOnLifecycle
 import space.pixelsg.tutuor.common.UiUtils.top
@@ -18,7 +21,10 @@ class LessonsListFragment : BindingFragment<LessonsListFragmentBinding>({ inflat
     private val lessonsAdapter by lazy {
         LessonViewAdapter(
             onLessonClick = {
-
+                findNavController().navigate(
+                    R.id.action_actionLessons_to_editLessonFragment,
+                    bundleOf("id" to it.id)
+                )
             }
         )
     }

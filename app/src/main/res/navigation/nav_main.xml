@@ -45,10 +45,18 @@
         <action
             android:id="@+id/action_actionLessons_to_createLessonBottomFragment"
             app:destination="@id/createLessonBottomFragment" />
+        <action
+            android:id="@+id/action_actionLessons_to_editLessonFragment"
+            app:destination="@id/editLessonFragment" />
     </fragment>
     <dialog
         android:id="@+id/createLessonBottomFragment"
         tools:layout="@layout/create_lesson_bottom_fragment"
         android:name="space.pixelsg.tutuor.main.lessons.create_lesson.CreateLessonBottomFragment"
         android:label="CreateLessonBottomFragment" />
+    <dialog
+        android:id="@+id/editLessonFragment"
+        tools:layout="@layout/edit_lesson_bottom_fragment"
+        android:name="space.pixelsg.tutuor.main.lessons.edit_lesson.EditLessonFragment"
+        android:label="EditLessonFragment" />
 </navigation>

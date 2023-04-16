@@ -59,10 +59,7 @@ class CreateLessonBottomFragment : BottomSheetDialogFragment() {
             binding.dateInput.replaceText(it)
         }
 
-        binding.dateInputLayout.setOnClickListener {
-            openDateTimePicker()
-        }
-        binding.dateInput.setOnClickListener {
+        binding.buttonSelectDatetime.setOnClickListener {
             openDateTimePicker()
         }
 
@@ -94,7 +91,7 @@ class CreateLessonBottomFragment : BottomSheetDialogFragment() {
     private fun openDateTimePicker() {
         DatePickerDialog { y, m, d ->
             lifecycleScope.launch {
-                viewModel.date.emit("${d}.${m}.$y")
+                viewModel.date.emit("${d}.${m + 1}.$y")
             }
         }.show(childFragmentManager, "datepicker")
         TimePickerDialog { h, m ->
