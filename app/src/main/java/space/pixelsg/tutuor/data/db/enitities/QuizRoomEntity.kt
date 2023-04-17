@@ -6,26 +6,20 @@ import androidx.room.PrimaryKey
 import androidx.room.TypeConverters
 import org.joda.time.DateTime
 import space.pixelsg.tutuor.data.db.converters.DateTimeConverter
-import space.pixelsg.tutuor.data.mapper.LessonMapper
+import space.pixelsg.tutuor.data.mapper.QuizzesMapper
 import space.pixelsg.tutuor.mapper.Mappable
 import space.pixelsg.tutuor.mapper.annotations.MapperClass
 
-@Entity(tableName = "lessons")
+@Entity(tableName = "quizzes")
+@MapperClass(mapper = QuizzesMapper::class)
 @TypeConverters(value = [DateTimeConverter::class])
-@MapperClass(mapper = LessonMapper::class)
-data class LessonRoomEntity(
+data class QuizRoomEntity(
     @PrimaryKey(autoGenerate = true)
     override val id: Long? = null,
     @ColumnInfo
     val title: String,
     @ColumnInfo
-    val description: String,
+    val url: String,
     @ColumnInfo
-    val grade: Int = -1,
-    @ColumnInfo
-    val date: DateTime,
-    @ColumnInfo
-    val teacherID: Long,
-    @ColumnInfo
-    val studentID: Long
+    val dateTime: DateTime,
 ) : RoomEntity<Long>, Mappable

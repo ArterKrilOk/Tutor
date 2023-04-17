@@ -1,9 +1,11 @@
 package space.pixelsg.tutuor.data.mapper
 
 import space.pixelsg.tutuor.data.db.enitities.LessonRoomEntity
+import space.pixelsg.tutuor.data.db.enitities.QuizRoomEntity
 import space.pixelsg.tutuor.data.db.enitities.StudentRoomEntity
 import space.pixelsg.tutuor.data.db.enitities.TeacherRoomEntity
 import space.pixelsg.tutuor.domain.models.LessonEntity
+import space.pixelsg.tutuor.domain.models.QuizEntity
 import space.pixelsg.tutuor.domain.models.StudentEntity
 import space.pixelsg.tutuor.domain.models.TeacherEntity
 import space.pixelsg.tutuor.mapper.annotations.MapMethod
@@ -57,6 +59,23 @@ object LessonMapper {
             date,
             teacherID,
             studentID
+        )
+    }
+}
+
+object QuizzesMapper {
+    @MapMethod
+    fun dbToDomain(quiz: QuizRoomEntity): QuizEntity = quiz.run {
+        QuizEntity(id ?: 0, title, url, dateTime)
+    }
+
+    @MapMethod
+    fun domainToDb(quiz: QuizEntity): QuizRoomEntity = quiz.run {
+        QuizRoomEntity(
+            if (id == -1L) null else id,
+            title,
+            url,
+            dateTime
         )
     }
 }

@@ -5,6 +5,7 @@ import androidx.room.Room
 import dagger.Module
 import dagger.Provides
 import space.pixelsg.tutuor.data.db.dao.LessonDao
+import space.pixelsg.tutuor.data.db.dao.QuizDao
 import space.pixelsg.tutuor.data.db.dao.StudentDao
 import space.pixelsg.tutuor.data.db.dao.TeacherDao
 import space.pixelsg.tutuor.data.db.database.AppDatabase
@@ -31,4 +32,8 @@ class DatabaseModule {
     @Provides
     @DataScope
     fun provideLessonDao(database: AppDatabase): LessonDao = database.lessonDao()
+
+    @Provides
+    @DataScope
+    fun provideQuizDao(database: AppDatabase): QuizDao = database.quizDao()
 }

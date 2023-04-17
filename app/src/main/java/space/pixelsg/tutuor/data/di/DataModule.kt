@@ -6,11 +6,13 @@ import space.pixelsg.tutuor.data.api.TestAuthApi
 import space.pixelsg.tutuor.data.db.di.DatabaseModule
 import space.pixelsg.tutuor.data.repository.LocalDBAuthRepositoryImpl
 import space.pixelsg.tutuor.data.repository.LocalDBLessonRepositoryImpl
+import space.pixelsg.tutuor.data.repository.LocalDBQuizRepositoryImpl
 import space.pixelsg.tutuor.data.repository.LocalDBStudentRepositoryImpl
 import space.pixelsg.tutuor.data.repository.LocalDBTeacherRepositoryImpl
 import space.pixelsg.tutuor.domain.api.AuthApi
 import space.pixelsg.tutuor.domain.repository.AuthRepository
 import space.pixelsg.tutuor.domain.repository.LessonsRepository
+import space.pixelsg.tutuor.domain.repository.QuizRepository
 import space.pixelsg.tutuor.domain.repository.StudentsRepository
 import space.pixelsg.tutuor.domain.repository.TeachersRepository
 
@@ -47,4 +49,10 @@ interface DataModule {
     fun bindAuthRepository(
         repo: LocalDBAuthRepositoryImpl
     ): AuthRepository
+
+    @Binds
+    @DataScope
+    fun bindQuizRepository(
+        repo: LocalDBQuizRepositoryImpl
+    ): QuizRepository
 }

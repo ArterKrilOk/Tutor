@@ -7,9 +7,9 @@
 
     <fragment
         android:id="@+id/actionStudents"
-        tools:layout="@layout/students_fragment"
         android:name="space.pixelsg.tutuor.main.students.StudentsFragment"
-        android:label="StudentsFragment">
+        android:label="StudentsFragment"
+        tools:layout="@layout/students_fragment">
         <action
             android:id="@+id/action_actionStudents_to_createStudentBottomFragment"
             app:destination="@id/createStudentBottomFragment" />
@@ -24,24 +24,24 @@
 
     <dialog
         android:id="@+id/createStudentBottomFragment"
-        tools:layout="@layout/create_student_bottom_fragment"
         android:name="space.pixelsg.tutuor.main.create_student.CreateStudentBottomFragment"
-        android:label="CreateStudentBottomFragment" />
+        android:label="CreateStudentBottomFragment"
+        tools:layout="@layout/create_student_bottom_fragment" />
     <dialog
         android:id="@+id/studentInfoFragment"
-        tools:layout="@layout/create_student_bottom_fragment"
         android:name="space.pixelsg.tutuor.main.student_info.StudentInfoFragment"
-        android:label="StudentInfoFragment" />
+        android:label="StudentInfoFragment"
+        tools:layout="@layout/create_student_bottom_fragment" />
     <fragment
         android:id="@+id/actionAccount"
-        tools:layout="@layout/account_fragment"
         android:name="space.pixelsg.tutuor.main.account.AccountFragment"
-        android:label="AccountFragment" />
+        android:label="AccountFragment"
+        tools:layout="@layout/account_fragment" />
     <fragment
         android:id="@+id/actionLessons"
         android:name="space.pixelsg.tutuor.main.lessons.main.LessonsFragment"
-        tools:layout="@layout/lessons_list_fragment"
-        android:label="LessonsFragment">
+        android:label="LessonsFragment"
+        tools:layout="@layout/lessons_list_fragment">
         <action
             android:id="@+id/action_actionLessons_to_createLessonBottomFragment"
             app:destination="@id/createLessonBottomFragment" />
@@ -51,12 +51,26 @@
     </fragment>
     <dialog
         android:id="@+id/createLessonBottomFragment"
-        tools:layout="@layout/create_lesson_bottom_fragment"
         android:name="space.pixelsg.tutuor.main.lessons.create_lesson.CreateLessonBottomFragment"
-        android:label="CreateLessonBottomFragment" />
+        android:label="CreateLessonBottomFragment"
+        tools:layout="@layout/create_lesson_bottom_fragment" />
     <dialog
         android:id="@+id/editLessonFragment"
-        tools:layout="@layout/edit_lesson_bottom_fragment"
         android:name="space.pixelsg.tutuor.main.lessons.edit_lesson.EditLessonFragment"
-        android:label="EditLessonFragment" />
+        android:label="EditLessonFragment"
+        tools:layout="@layout/edit_lesson_bottom_fragment" />
+    <fragment
+        android:id="@+id/actionQuizzes"
+        android:name="space.pixelsg.tutuor.main.quizes.QuizzesFragment"
+        android:label="QuizzesFragment"
+        tools:layout="@layout/quizzes_fragment">
+        <action
+            android:id="@+id/action_actionQuizzes_to_createQuizBottomFragment"
+            app:destination="@id/createQuizBottomFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/createQuizBottomFragment"
+        tools:layout="@layout/create_quiz_bottom_fragment"
+        android:name="space.pixelsg.tutuor.main.create_quiz.CreateQuizBottomFragment"
+        android:label="CreateQuizBottomFragment" />
 </navigation>

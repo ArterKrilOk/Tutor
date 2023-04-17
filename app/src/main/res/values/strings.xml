@@ -58,4 +58,10 @@
     <string name="doubleclick_to_select_date_and_time">Doubleclick to select date and time</string>
     <string name="click_to_select">Click to select</string>
     <string name="select">Select</string>
+    <string name="open">Open</string>
+    <string name="no_quizzes">No quizzes</string>
+    <string name="add_quiz">Add quiz</string>
+    <string name="create_quiz">Create quiz</string>
+    <string name="url">Url</string>
+    <string name="create_google_form">Create google form</string>
 </resources>

@@ -5,6 +5,7 @@ import space.pixelsg.tutuor.app.di.AppComponent
 import space.pixelsg.tutuor.domain.api.AuthApi
 import space.pixelsg.tutuor.domain.repository.AuthRepository
 import space.pixelsg.tutuor.domain.repository.LessonsRepository
+import space.pixelsg.tutuor.domain.repository.QuizRepository
 import space.pixelsg.tutuor.domain.repository.StudentsRepository
 import space.pixelsg.tutuor.domain.repository.TeachersRepository
 
@@ -18,6 +19,7 @@ interface DataComponent {
     val lessonsRepository: LessonsRepository
     val studentRepository: StudentsRepository
     val authRepository: AuthRepository
+    val quizRepository: QuizRepository
 
     val authApi: AuthApi
 }
